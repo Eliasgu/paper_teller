@@ -100,10 +100,9 @@ def extract_all_figures(pdf_path, output_dir="images", prefix=""):
                 y0 = max(0, inst.y0 - 500)
                 y1 = min(page_height, inst.y1 + 30)
             else:  # table
-                # Table: 标题在表格上方
-                # 向下找表格内容（300-500pt）
-                y0 = max(0, inst.y0 - 20)
-                y1 = min(page_height, inst.y1 + 400)
+                # Table: 标题位置不固定，默认向上多截、向下少截
+                y0 = max(0, inst.y0 - 700)
+                y1 = min(page_height, inst.y1 + 200)
 
             # 截图
             clip_rect = fitz.Rect(x0, y0, x1, y1)

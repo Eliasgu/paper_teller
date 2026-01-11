@@ -32,7 +32,7 @@ allowed-tools: Bash, Read, Write, Edit, Glob, Grep, WebFetch, TodoWrite
 3. ✅ 静默修复质量问题
 4. ✅ 生成完整最终版本
 
-**推荐顺序**：步骤0 → 1 → 5 → 2 → 3-7
+**推荐顺序**：步骤1 → 2 → 3 → 4 → 5 → 6 → 7
 
 ---
 
@@ -55,14 +55,14 @@ TodoWrite([
 
 ---
 
-### 步骤0：智能PDF管理
+### 步骤1：智能PDF管理
 
 **目标**：下载PDF，创建规范化目录结构
 
 **执行**：
 ```bash
 # 使用脚本自动处理
-python ~/.codex/skills/qiaomu-paper-interpreter/scripts/extract_pdf_metadata.py \
+python ~/.codex/skills/paper-interpreter/scripts/extract_pdf_metadata.py \
   <temp_pdf> papers <url>
 ```
 
@@ -82,7 +82,7 @@ python ~/.codex/skills/qiaomu-paper-interpreter/scripts/extract_pdf_metadata.py 
 
 ---
 
-### 步骤1：提取PDF文本
+### 步骤2：提取PDF文本
 
 **目标**：提取完整文本内容
 
@@ -100,14 +100,14 @@ python ~/.codex/skills/qiaomu-paper-interpreter/scripts/extract_pdf_metadata.py 
 
 ---
 
-### 步骤5：提前提取图表
+### 步骤3：提前提取图表
 
 **目标**：提取所有Figure和Table，供写作时引用
 
 **执行**：
 ```bash
 cd {paper_dir}
-python ~/.codex/skills/qiaomu-paper-interpreter/scripts/extract_all_figures.py \
+python ~/.codex/skills/paper-interpreter/scripts/extract_all_figures.py \
   {paper_id}.pdf images {paper_id}
 ```
 
@@ -125,7 +125,7 @@ python ~/.codex/skills/qiaomu-paper-interpreter/scripts/extract_all_figures.py \
 
 ---
 
-### 步骤2：生成完整解读
+### 步骤4：生成完整解读
 
 **目标**：一次性生成最终完整版本（不要分初稿和完善版）
 
@@ -180,14 +180,14 @@ python ~/.codex/skills/qiaomu-paper-interpreter/scripts/extract_all_figures.py \
 
 ---
 
-### 步骤5.5：生成《纽约客》配图
+### 步骤5：生成《纽约客》配图
 
 **目标**：为每个H2标题生成配图
 
 **工作流**：
 1. 创建配置模板：
 ```bash
-python ~/.codex/skills/qiaomu-paper-interpreter/scripts/generate_illustrations_v2.py \
+python ~/.codex/skills/paper-interpreter/scripts/generate_illustrations_v2.py \
   --create-template {filename}
 ```
 
@@ -198,7 +198,7 @@ python ~/.codex/skills/qiaomu-paper-interpreter/scripts/generate_illustrations_v
 
 3. 批量生成：
 ```bash
-python ~/.codex/skills/qiaomu-paper-interpreter/scripts/generate_illustrations_v2.py {filename}
+python ~/.codex/skills/paper-interpreter/scripts/generate_illustrations_v2.py {filename}
 ```
 
 **配图要求**：
@@ -222,7 +222,7 @@ python ~/.codex/skills/qiaomu-paper-interpreter/scripts/generate_illustrations_v
 
 **执行**：
 ```bash
-python ~/.codex/skills/qiaomu-paper-interpreter/scripts/finalize_markdown.py \
+python ~/.codex/skills/paper-interpreter/scripts/finalize_markdown.py \
   {paper_dir}/{filename} .
 ```
 

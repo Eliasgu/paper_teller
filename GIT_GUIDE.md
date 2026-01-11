@@ -4,7 +4,7 @@
 
 ```
 ~/.codex/skills/
-├── qiaomu-paper-interpreter/    # 论文解读skill（独立git仓库）
+├── paper-interpreter/    # 论文解读skill（独立git仓库）
 │   ├── .git/
 │   ├── README.md
 │   ├── CHANGELOG.md
@@ -24,7 +24,7 @@
 
 ```bash
 # 论文解读skill
-cd ~/.codex/skills/qiaomu-paper-interpreter
+cd ~/.codex/skills/paper-interpreter
 git status
 git log --oneline
 
@@ -38,7 +38,7 @@ git log --oneline
 
 ```bash
 # 论文解读skill
-cd ~/.codex/skills/qiaomu-paper-interpreter
+cd ~/.codex/skills/paper-interpreter
 git add .
 git commit -m "✨ 描述你的更改"
 
@@ -122,7 +122,7 @@ git commit -m "📝 docs: 更新配图设计指南"
 
 ## 当前版本
 
-**qiaomu-paper-interpreter**: v1.1.0
+**paper-interpreter**: v1.1.0
 - ✅ 配图生成prompt使用中文描述
 - ✅ 支持16:9横幅比例
 - ✅ 支持底部中文标题
@@ -175,14 +175,14 @@ git branch -d feature/new-style
 
 1. **推送到远程仓库**（如GitHub）
    ```bash
-   git remote add origin https://github.com/yourname/qiaomu-paper-interpreter.git
+   git remote add origin https://github.com/yourname/paper-interpreter.git
    git push -u origin main
    ```
 
 2. **或者手动备份**
    ```bash
    cd ~/.codex/skills
-   tar -czf skills-backup-$(date +%Y%m%d).tar.gz qiaomu-paper-interpreter shared-lib
+   tar -czf skills-backup-$(date +%Y%m%d).tar.gz paper-interpreter shared-lib
    ```
 
 ## 协作工作流

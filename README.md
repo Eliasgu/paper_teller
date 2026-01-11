@@ -30,7 +30,7 @@
 ## 目录结构
 
 ```
-qiaomu-paper-interpreter/
+paper-interpreter/
 ├── README.md                           # 本文件
 ├── SKILL.md                           # 详细的workflow说明
 ├── CHANGELOG.md                       # 版本变更记录

@@ -134,7 +134,7 @@ https://arxiv.org/pdf/1706.03762
 
 **方式3：使用skill命令**
 ```
-/qiaomu-paper-interpreter https://arxiv.org/pdf/1706.03762
+/paper-interpreter https://arxiv.org/pdf/1706.03762
 ```
 
 ---

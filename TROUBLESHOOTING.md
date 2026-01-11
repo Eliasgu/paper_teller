@@ -293,7 +293,7 @@ ls papers/YourPaper_2024/
 
 # 手动执行剩余步骤
 cd papers/YourPaper_2024
-python ~/.codex/skills/qiaomu-paper-interpreter/scripts/finalize_markdown.py xxx_解读.md ../..
+python ~/.codex/skills/paper-interpreter/scripts/finalize_markdown.py xxx_解读.md ../..
 ```
 
 ---
